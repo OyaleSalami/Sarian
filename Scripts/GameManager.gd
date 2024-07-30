@@ -9,6 +9,5 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
 func _on_Play_Button_up():
-	print("Played")
+	get_node("UI Canvas").visible = false

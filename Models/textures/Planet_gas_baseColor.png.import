@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Planet_gas_baseColor.jpeg-d587892ddc9eedf1795427093183d142.s3tc.stex"
-path.etc="res://.import/Planet_gas_baseColor.jpeg-d587892ddc9eedf1795427093183d142.etc.stex"
+path.s3tc="res://.import/Planet_gas_baseColor.png-576c46444d63aa8f932c6ccf39dac837.s3tc.stex"
+path.etc="res://.import/Planet_gas_baseColor.png-576c46444d63aa8f932c6ccf39dac837.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/textures/Planet_gas_baseColor.jpeg"
-dest_files=[ "res://.import/Planet_gas_baseColor.jpeg-d587892ddc9eedf1795427093183d142.s3tc.stex", "res://.import/Planet_gas_baseColor.jpeg-d587892ddc9eedf1795427093183d142.etc.stex" ]
+source_file="res://Models/textures/Planet_gas_baseColor.png"
+dest_files=[ "res://.import/Planet_gas_baseColor.png-576c46444d63aa8f932c6ccf39dac837.s3tc.stex", "res://.import/Planet_gas_baseColor.png-576c46444d63aa8f932c6ccf39dac837.etc.stex" ]
 
 [params]
 

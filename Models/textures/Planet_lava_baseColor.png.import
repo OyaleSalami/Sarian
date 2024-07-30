@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Planet_continental_baseColor.jpeg-19f86f09e8a43a3dbb55a0cb56607aee.s3tc.stex"
-path.etc="res://.import/Planet_continental_baseColor.jpeg-19f86f09e8a43a3dbb55a0cb56607aee.etc.stex"
+path.s3tc="res://.import/Planet_lava_baseColor.png-3f1e7481f4cf57e9d76b736b974ff80b.s3tc.stex"
+path.etc="res://.import/Planet_lava_baseColor.png-3f1e7481f4cf57e9d76b736b974ff80b.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/textures/Planet_continental_baseColor.jpeg"
-dest_files=[ "res://.import/Planet_continental_baseColor.jpeg-19f86f09e8a43a3dbb55a0cb56607aee.s3tc.stex", "res://.import/Planet_continental_baseColor.jpeg-19f86f09e8a43a3dbb55a0cb56607aee.etc.stex" ]
+source_file="res://Models/textures/Planet_lava_baseColor.png"
+dest_files=[ "res://.import/Planet_lava_baseColor.png-3f1e7481f4cf57e9d76b736b974ff80b.s3tc.stex", "res://.import/Planet_lava_baseColor.png-3f1e7481f4cf57e9d76b736b974ff80b.etc.stex" ]
 
 [params]
 
