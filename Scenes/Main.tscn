@@ -1,25 +1,11 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Fonts/AtomicAge-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://UI/button_square_gradient.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/GameManager.gd" type="Script" id=3]
 [ext_resource path="res://UI/icon_play_light.png" type="Texture" id=4]
-[ext_resource path="res://Models/textures/Planet 2/Material/ContinentalPlanet.material" type="Material" id=5]
-[ext_resource path="res://Models/textures/Planet 1/Material/BarrenPlanet.material" type="Material" id=6]
-[ext_resource path="res://Models/textures/Planet 3/Material/FrozenPlanet.material" type="Material" id=7]
-[ext_resource path="res://Models/textures/Planet 2/Material/ContinentalPlanetCloud1.material" type="Material" id=8]
-[ext_resource path="res://Models/textures/Planet 4/Material/GasPlanet.material" type="Material" id=9]
-[ext_resource path="res://Models/textures/Planet 4/Material/GasPlanetCloud.material" type="Material" id=10]
-[ext_resource path="res://Models/textures/Planet 5/Material/GasPlanet2.material" type="Material" id=11]
-[ext_resource path="res://Models/textures/Planet 5/Material/GasPlanet2Cloud.material" type="Material" id=12]
-[ext_resource path="res://Models/textures/Planet 6/Material/SmacPlanet.material" type="Material" id=13]
-[ext_resource path="res://Models/textures/Planet 6/Material/SmacPlanetCloud.material" type="Material" id=14]
-[ext_resource path="res://Models/textures/Planet 7/Planet_lava_baseColor.png" type="Texture" id=15]
 [ext_resource path="res://Scripts/Planet.gd" type="Script" id=16]
-[ext_resource path="res://Scenes/block.fbx" type="PackedScene" id=17]
-[ext_resource path="res://Models/textures/Planet 7/Planet_lava_emissive.png" type="Texture" id=18]
-[ext_resource path="res://Models/textures/Planet 7/Planet_lava_metallicRoughness.png" type="Texture" id=19]
-[ext_resource path="res://Models/textures/Planet 7/Planet_lava_normal.png" type="Texture" id=20]
+[ext_resource path="res://UI/pause.png" type="Texture" id=17]
 [ext_resource path="res://Scripts/BlockControl.gd" type="Script" id=21]
 
 [sub_resource type="DynamicFont" id=1]
@@ -51,58 +37,37 @@ bg_color = Color( 0.196078, 0.196078, 0.196078, 0.0980392 )
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 1, 1, 0.0392157 )
 
-[sub_resource type="SphereMesh" id=8]
+[sub_resource type="ArrayMesh" id=21]
 
-[sub_resource type="SphereMesh" id=9]
+[sub_resource type="ArrayMesh" id=22]
+blend_shape_mode = 0
+surfaces/0 = {
+"aabb": AABB( -0.0022943, -0.00776767, -0.000813837, 0.00600263, 0.0160319, 0.00162767 ),
+"array_data": PoolByteArray( 240, 205, 7, 187, 144, 69, 134, 59, 171, 87, 85, 186, 130, 12, 0, 0, 0, 92, 22, 187, 195, 135, 241, 58, 169, 87, 85, 58, 130, 12, 0, 0, 0, 92, 22, 187, 195, 135, 241, 58, 171, 87, 85, 186, 130, 12, 0, 0, 240, 205, 7, 187, 144, 69, 134, 59, 169, 87, 85, 58, 130, 12, 0, 0, 163, 220, 120, 58, 85, 85, 115, 187, 171, 87, 85, 186, 112, 59, 0, 0, 204, 172, 211, 55, 185, 7, 2, 187, 169, 87, 85, 58, 112, 59, 0, 0, 204, 172, 211, 55, 185, 7, 2, 187, 171, 87, 85, 186, 112, 59, 0, 0, 163, 220, 120, 58, 85, 85, 115, 187, 169, 87, 85, 58, 112, 59, 0, 0, 71, 153, 181, 185, 138, 102, 7, 60, 171, 87, 85, 186, 144, 59, 0, 0, 235, 101, 185, 186, 69, 82, 205, 59, 169, 87, 85, 58, 144, 59, 0, 0, 235, 101, 185, 186, 69, 82, 205, 59, 171, 87, 85, 186, 144, 59, 0, 0, 71, 153, 181, 185, 138, 102, 7, 60, 169, 87, 85, 58, 144, 59, 0, 0, 163, 220, 120, 58, 85, 85, 115, 187, 169, 87, 85, 58, 0, 0, 127, 0, 71, 153, 181, 185, 54, 9, 150, 187, 169, 87, 85, 58, 0, 0, 127, 0, 204, 172, 211, 55, 185, 7, 2, 187, 169, 87, 85, 58, 0, 0, 127, 0, 71, 153, 181, 185, 54, 9, 150, 187, 169, 87, 85, 58, 0, 0, 127, 0, 245, 101, 185, 186, 199, 28, 41, 187, 169, 87, 85, 58, 0, 0, 127, 0, 204, 172, 211, 55, 185, 7, 2, 187, 169, 87, 85, 58, 0, 0, 127, 0, 163, 220, 120, 58, 85, 85, 115, 187, 169, 87, 85, 58, 0, 0, 127, 0, 189, 1, 143, 58, 240, 109, 207, 187, 169, 87, 85, 58, 0, 0, 127, 0, 71, 153, 181, 185, 54, 9, 150, 187, 169, 87, 85, 58, 0, 0, 127, 0, 240, 205, 7, 187, 235, 26, 216, 185, 169, 87, 85, 58, 0, 0, 127, 0, 163, 220, 120, 58, 85, 85, 115, 187, 169, 87, 85, 58, 0, 0, 127, 0, 202, 183, 15, 59, 123, 82, 171, 187, 169, 87, 85, 58, 0, 0, 127, 0, 189, 1, 143, 58, 240, 109, 207, 187, 169, 87, 85, 58, 0, 0, 127, 0, 102, 143, 14, 186, 143, 218, 226, 184, 169, 87, 85, 58, 0, 0, 127, 0, 202, 183, 15, 59, 123, 82, 171, 187, 169, 87, 85, 58, 0, 0, 127, 0, 105, 7, 115, 59, 202, 18, 212, 187, 169, 87, 85, 58, 0, 0, 127, 0, 41, 238, 64, 186, 198, 135, 241, 58, 169, 87, 85, 58, 0, 0, 127, 0, 105, 7, 115, 59, 202, 18, 212, 187, 169, 87, 85, 58, 0, 0, 127, 0, 84, 74, 58, 59, 245, 135, 254, 187, 169, 87, 85, 58, 0, 0, 127, 0, 189, 1, 143, 58, 240, 109, 207, 187, 169, 87, 85, 58, 0, 0, 127, 0, 0, 92, 22, 187, 195, 135, 241, 58, 169, 87, 85, 58, 0, 0, 127, 0, 240, 205, 7, 187, 144, 69, 134, 59, 169, 87, 85, 58, 0, 0, 127, 0, 92, 143, 14, 186, 155, 158, 120, 59, 169, 87, 85, 58, 0, 0, 127, 0, 235, 101, 185, 186, 69, 82, 205, 59, 169, 87, 85, 58, 0, 0, 127, 0, 20, 174, 211, 55, 192, 199, 185, 59, 169, 87, 85, 58, 0, 0, 127, 0, 163, 220, 120, 58, 138, 110, 242, 59, 169, 87, 85, 58, 0, 0, 127, 0, 71, 153, 181, 185, 138, 102, 7, 60, 169, 87, 85, 58, 0, 0, 127, 0, 202, 183, 15, 59, 123, 82, 171, 187, 171, 87, 85, 186, 0, 0, 129, 0, 71, 153, 181, 185, 54, 9, 150, 187, 171, 87, 85, 186, 0, 0, 129, 0, 189, 1, 143, 58, 240, 109, 207, 187, 171, 87, 85, 186, 0, 0, 129, 0, 71, 153, 181, 185, 54, 9, 150, 187, 171, 87, 85, 186, 0, 0, 129, 0, 202, 183, 15, 59, 123, 82, 171, 187, 171, 87, 85, 186, 0, 0, 129, 0, 163, 220, 120, 58, 85, 85, 115, 187, 171, 87, 85, 186, 0, 0, 129, 0, 20, 174, 211, 55, 192, 199, 185, 59, 171, 87, 85, 186, 112, 197, 0, 0, 163, 220, 120, 58, 138, 110, 242, 59, 169, 87, 85, 58, 112, 197, 0, 0, 163, 220, 120, 58, 138, 110, 242, 59, 171, 87, 85, 186, 112, 197, 0, 0, 20, 174, 211, 55, 192, 199, 185, 59, 169, 87, 85, 58, 112, 197, 0, 0, 245, 101, 185, 186, 199, 28, 41, 187, 171, 87, 85, 186, 144, 197, 0, 0, 71, 153, 181, 185, 54, 9, 150, 187, 169, 87, 85, 58, 144, 197, 0, 0, 71, 153, 181, 185, 54, 9, 150, 187, 171, 87, 85, 186, 144, 197, 0, 0, 245, 101, 185, 186, 199, 28, 41, 187, 169, 87, 85, 58, 144, 197, 0, 0, 92, 143, 14, 186, 155, 158, 120, 59, 171, 87, 85, 186, 121, 220, 0, 0, 20, 174, 211, 55, 192, 199, 185, 59, 169, 87, 85, 58, 121, 220, 0, 0, 20, 174, 211, 55, 192, 199, 185, 59, 171, 87, 85, 186, 121, 220, 0, 0, 92, 143, 14, 186, 155, 158, 120, 59, 169, 87, 85, 58, 121, 220, 0, 0, 202, 183, 15, 59, 123, 82, 171, 187, 171, 87, 85, 186, 98, 80, 0, 0, 163, 220, 120, 58, 85, 85, 115, 187, 169, 87, 85, 58, 98, 80, 0, 0, 163, 220, 120, 58, 85, 85, 115, 187, 171, 87, 85, 186, 98, 80, 0, 0, 202, 183, 15, 59, 123, 82, 171, 187, 169, 87, 85, 58, 98, 80, 0, 0, 204, 172, 211, 55, 185, 7, 2, 187, 171, 87, 85, 186, 0, 0, 129, 0, 240, 205, 7, 187, 235, 26, 216, 185, 171, 87, 85, 186, 0, 0, 129, 0, 245, 101, 185, 186, 199, 28, 41, 187, 171, 87, 85, 186, 0, 0, 129, 0, 240, 205, 7, 187, 235, 26, 216, 185, 171, 87, 85, 186, 0, 0, 129, 0, 204, 172, 211, 55, 185, 7, 2, 187, 171, 87, 85, 186, 0, 0, 129, 0, 102, 143, 14, 186, 143, 218, 226, 184, 171, 87, 85, 186, 0, 0, 129, 0, 41, 238, 64, 186, 198, 135, 241, 58, 171, 87, 85, 186, 0, 0, 129, 0, 240, 205, 7, 187, 144, 69, 134, 59, 171, 87, 85, 186, 0, 0, 129, 0, 0, 92, 22, 187, 195, 135, 241, 58, 171, 87, 85, 186, 0, 0, 129, 0, 92, 143, 14, 186, 155, 158, 120, 59, 171, 87, 85, 186, 0, 0, 129, 0, 0, 92, 22, 187, 195, 135, 241, 58, 171, 87, 85, 186, 130, 244, 0, 0, 240, 205, 7, 187, 235, 26, 216, 185, 169, 87, 85, 58, 130, 244, 0, 0, 240, 205, 7, 187, 235, 26, 216, 185, 171, 87, 85, 186, 130, 244, 0, 0, 0, 92, 22, 187, 195, 135, 241, 58, 169, 87, 85, 58, 130, 244, 0, 0, 163, 220, 120, 58, 138, 110, 242, 59, 171, 87, 85, 186, 70, 105, 0, 0, 71, 153, 181, 185, 138, 102, 7, 60, 169, 87, 85, 58, 70, 105, 0, 0, 71, 153, 181, 185, 138, 102, 7, 60, 171, 87, 85, 186, 70, 105, 0, 0, 163, 220, 120, 58, 138, 110, 242, 59, 169, 87, 85, 58, 70, 105, 0, 0, 102, 143, 14, 186, 143, 218, 226, 184, 171, 87, 85, 186, 126, 12, 0, 0, 41, 238, 64, 186, 198, 135, 241, 58, 169, 87, 85, 58, 126, 12, 0, 0, 41, 238, 64, 186, 198, 135, 241, 58, 171, 87, 85, 186, 126, 12, 0, 0, 102, 143, 14, 186, 143, 218, 226, 184, 169, 87, 85, 58, 126, 12, 0, 0, 20, 174, 211, 55, 192, 199, 185, 59, 171, 87, 85, 186, 0, 0, 129, 0, 71, 153, 181, 185, 138, 102, 7, 60, 171, 87, 85, 186, 0, 0, 129, 0, 235, 101, 185, 186, 69, 82, 205, 59, 171, 87, 85, 186, 0, 0, 129, 0, 163, 220, 120, 58, 138, 110, 242, 59, 171, 87, 85, 186, 0, 0, 129, 0, 235, 101, 185, 186, 69, 82, 205, 59, 171, 87, 85, 186, 135, 36, 0, 0, 240, 205, 7, 187, 144, 69, 134, 59, 169, 87, 85, 58, 135, 36, 0, 0, 240, 205, 7, 187, 144, 69, 134, 59, 171, 87, 85, 186, 135, 36, 0, 0, 235, 101, 185, 186, 69, 82, 205, 59, 169, 87, 85, 58, 135, 36, 0, 0, 240, 205, 7, 187, 235, 26, 216, 185, 171, 87, 85, 186, 135, 220, 0, 0, 245, 101, 185, 186, 199, 28, 41, 187, 169, 87, 85, 58, 135, 220, 0, 0, 245, 101, 185, 186, 199, 28, 41, 187, 171, 87, 85, 186, 135, 220, 0, 0, 240, 205, 7, 187, 235, 26, 216, 185, 169, 87, 85, 58, 135, 220, 0, 0, 105, 7, 115, 59, 202, 18, 212, 187, 171, 87, 85, 186, 0, 0, 129, 0, 84, 74, 58, 59, 245, 135, 254, 187, 171, 87, 85, 186, 0, 0, 129, 0, 189, 1, 143, 58, 240, 109, 207, 187, 171, 87, 85, 186, 0, 0, 129, 0, 105, 7, 115, 59, 202, 18, 212, 187, 171, 87, 85, 186, 0, 0, 129, 0, 163, 220, 120, 58, 85, 85, 115, 187, 171, 87, 85, 186, 0, 0, 129, 0, 245, 101, 185, 186, 199, 28, 41, 187, 171, 87, 85, 186, 0, 0, 129, 0, 204, 172, 211, 55, 185, 7, 2, 187, 171, 87, 85, 186, 121, 36, 0, 0, 102, 143, 14, 186, 143, 218, 226, 184, 169, 87, 85, 58, 121, 36, 0, 0, 102, 143, 14, 186, 143, 218, 226, 184, 171, 87, 85, 186, 121, 36, 0, 0, 204, 172, 211, 55, 185, 7, 2, 187, 169, 87, 85, 58, 121, 36, 0, 0, 41, 238, 64, 186, 198, 135, 241, 58, 171, 87, 85, 186, 126, 244, 0, 0, 92, 143, 14, 186, 155, 158, 120, 59, 169, 87, 85, 58, 126, 244, 0, 0, 92, 143, 14, 186, 155, 158, 120, 59, 171, 87, 85, 186, 126, 244, 0, 0, 41, 238, 64, 186, 198, 135, 241, 58, 169, 87, 85, 58, 126, 244, 0, 0, 71, 153, 181, 185, 54, 9, 150, 187, 171, 87, 85, 186, 158, 176, 0, 0, 189, 1, 143, 58, 240, 109, 207, 187, 169, 87, 85, 58, 158, 176, 0, 0, 189, 1, 143, 58, 240, 109, 207, 187, 171, 87, 85, 186, 158, 176, 0, 0, 71, 153, 181, 185, 54, 9, 150, 187, 169, 87, 85, 58, 158, 176, 0, 0, 102, 143, 14, 186, 143, 218, 226, 184, 171, 87, 85, 186, 0, 0, 129, 0, 0, 92, 22, 187, 195, 135, 241, 58, 171, 87, 85, 186, 0, 0, 129, 0, 41, 238, 64, 186, 198, 135, 241, 58, 171, 87, 85, 186, 0, 0, 129, 0, 105, 7, 115, 59, 202, 18, 212, 187, 171, 87, 85, 186, 80, 98, 0, 0, 202, 183, 15, 59, 123, 82, 171, 187, 169, 87, 85, 58, 80, 98, 0, 0, 202, 183, 15, 59, 123, 82, 171, 187, 171, 87, 85, 186, 80, 98, 0, 0, 105, 7, 115, 59, 202, 18, 212, 187, 169, 87, 85, 58, 80, 98, 0, 0, 189, 1, 143, 58, 240, 109, 207, 187, 171, 87, 85, 186, 176, 158, 0, 0, 84, 74, 58, 59, 245, 135, 254, 187, 169, 87, 85, 58, 176, 158, 0, 0, 84, 74, 58, 59, 245, 135, 254, 187, 171, 87, 85, 186, 176, 158, 0, 0, 189, 1, 143, 58, 240, 109, 207, 187, 169, 87, 85, 58, 176, 158, 0, 0, 84, 74, 58, 59, 245, 135, 254, 187, 171, 87, 85, 186, 105, 186, 0, 0, 105, 7, 115, 59, 202, 18, 212, 187, 169, 87, 85, 58, 105, 186, 0, 0, 105, 7, 115, 59, 202, 18, 212, 187, 171, 87, 85, 186, 105, 186, 0, 0, 84, 74, 58, 59, 245, 135, 254, 187, 169, 87, 85, 58, 105, 186, 0, 0 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 1, 0, 0, 0, 3, 0, 4, 0, 5, 0, 6, 0, 5, 0, 4, 0, 7, 0, 8, 0, 9, 0, 10, 0, 9, 0, 8, 0, 11, 0, 12, 0, 13, 0, 14, 0, 15, 0, 16, 0, 17, 0, 18, 0, 19, 0, 20, 0, 16, 0, 21, 0, 17, 0, 22, 0, 23, 0, 24, 0, 21, 0, 25, 0, 17, 0, 26, 0, 27, 0, 19, 0, 21, 0, 28, 0, 25, 0, 29, 0, 30, 0, 31, 0, 21, 0, 32, 0, 28, 0, 32, 0, 33, 0, 28, 0, 33, 0, 34, 0, 28, 0, 33, 0, 35, 0, 34, 0, 35, 0, 36, 0, 34, 0, 35, 0, 37, 0, 36, 0, 35, 0, 38, 0, 37, 0, 39, 0, 40, 0, 41, 0, 42, 0, 43, 0, 44, 0, 45, 0, 46, 0, 47, 0, 46, 0, 45, 0, 48, 0, 49, 0, 50, 0, 51, 0, 50, 0, 49, 0, 52, 0, 53, 0, 54, 0, 55, 0, 54, 0, 53, 0, 56, 0, 57, 0, 58, 0, 59, 0, 58, 0, 57, 0, 60, 0, 61, 0, 62, 0, 63, 0, 64, 0, 65, 0, 66, 0, 67, 0, 68, 0, 69, 0, 68, 0, 67, 0, 70, 0, 71, 0, 72, 0, 73, 0, 72, 0, 71, 0, 74, 0, 75, 0, 76, 0, 77, 0, 76, 0, 75, 0, 78, 0, 79, 0, 80, 0, 81, 0, 80, 0, 79, 0, 82, 0, 83, 0, 84, 0, 85, 0, 84, 0, 83, 0, 86, 0, 87, 0, 88, 0, 89, 0, 88, 0, 87, 0, 90, 0, 91, 0, 92, 0, 93, 0, 92, 0, 91, 0, 94, 0, 95, 0, 41, 0, 96, 0, 97, 0, 98, 0, 43, 0, 99, 0, 63, 0, 40, 0, 100, 0, 44, 0, 65, 0, 101, 0, 102, 0, 103, 0, 102, 0, 101, 0, 104, 0, 105, 0, 106, 0, 107, 0, 106, 0, 105, 0, 108, 0, 109, 0, 110, 0, 111, 0, 110, 0, 109, 0, 112, 0, 113, 0, 69, 0, 62, 0, 114, 0, 66, 0, 115, 0, 70, 0, 85, 0, 68, 0, 85, 0, 70, 0, 83, 0, 116, 0, 117, 0, 118, 0, 117, 0, 116, 0, 119, 0, 120, 0, 121, 0, 122, 0, 121, 0, 120, 0, 123, 0, 124, 0, 125, 0, 126, 0, 125, 0, 124, 0, 127, 0 ),
+"blend_shape_data": [  ],
+"format": 97539,
+"index_count": 204,
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 128
+}
 
-[sub_resource type="SphereMesh" id=10]
-
-[sub_resource type="SphereMesh" id=11]
-
-[sub_resource type="SphereMesh" id=12]
-
-[sub_resource type="SphereMesh" id=13]
-
-[sub_resource type="SphereMesh" id=14]
-
-[sub_resource type="SphereMesh" id=15]
-
-[sub_resource type="SphereMesh" id=16]
-
-[sub_resource type="SphereMesh" id=17]
-
-[sub_resource type="SphereMesh" id=18]
-
-[sub_resource type="SphereMesh" id=19]
-
-[sub_resource type="SpatialMaterial" id=20]
-albedo_texture = ExtResource( 15 )
-metallic_texture = ExtResource( 19 )
-roughness = 0.75
-roughness_texture = ExtResource( 19 )
-emission_enabled = true
-emission = Color( 0, 0, 0, 1 )
-emission_energy = 2.0
-emission_operator = 0
-emission_on_uv2 = false
-emission_texture = ExtResource( 18 )
-normal_enabled = true
-normal_scale = 1.0
-normal_texture = ExtResource( 20 )
-
-[sub_resource type="ArrayMesh" id=23]
+[sub_resource type="ConvexPolygonShape" id=23]
+points = PoolVector3Array( -0.00207221, 0.00409765, -0.000813837, -0.0022943, 0.00184273, 0.000813837, -0.0022943, 0.00184273, -0.000813837, -0.00207221, 0.00409765, 0.000813837, 0.000949333, -0.00371297, -0.000813837, 2.52336e-05, -0.0019841, 0.000813837, 2.52336e-05, -0.0019841, -0.000813837, 0.000949333, -0.00371297, 0.000813837, -0.000346372, 0.00826419, -0.000813837, -0.00141448, 0.00626591, 0.000813837, -0.00141448, 0.00626591, -0.000813837, -0.000346372, 0.00826419, 0.000813837, 0.000949333, -0.00371297, 0.000813837, -0.000346372, -0.00457873, 0.000813837, 2.52336e-05, -0.0019841, 0.000813837, -0.000346372, -0.00457873, 0.000813837, -0.00141448, -0.00258045, 0.000813837, 2.52336e-05, -0.0019841, 0.000813837, 0.000949333, -0.00371297, 0.000813837, 0.00109106, -0.00633024, 0.000813837, -0.000346372, -0.00457873, 0.000813837, -0.00207221, -0.000412188, 0.000813837, 0.000949333, -0.00371297, 0.000813837, 0.00219296, -0.00522834, 0.000813837, 0.00109106, -0.00633024, 0.000813837, -0.000543824, -0.000108172, 0.000813837, 0.00219296, -0.00522834, 0.000813837, 0.00370833, -0.00647197, 0.000813837, -0.000735971, 0.00184273, 0.000813837, 0.00370833, -0.00647197, 0.000813837, 0.00284257, -0.00776767, 0.000813837, 0.00109106, -0.00633024, 0.000813837, -0.0022943, 0.00184273, 0.000813837, -0.00207221, 0.00409765, 0.000813837, -0.000543823, 0.00379363, 0.000813837, -0.00141448, 0.00626591, 0.000813837, 2.52342e-05, 0.00566956, 0.000813837, 0.000949333, 0.00739843, 0.000813837, -0.000346372, 0.00826419, 0.000813837, 0.00219296, -0.00522834, -0.000813837, -0.000346372, -0.00457873, -0.000813837, 0.00109106, -0.00633024, -0.000813837, -0.000346372, -0.00457873, -0.000813837, 0.00219296, -0.00522834, -0.000813837, 0.000949333, -0.00371297, -0.000813837, 2.52342e-05, 0.00566956, -0.000813837, 0.000949333, 0.00739843, 0.000813837, 0.000949333, 0.00739843, -0.000813837, 2.52342e-05, 0.00566956, 0.000813837, -0.00141448, -0.00258045, -0.000813837, -0.000346372, -0.00457873, 0.000813837, -0.000346372, -0.00457873, -0.000813837, -0.00141448, -0.00258045, 0.000813837, -0.000543823, 0.00379363, -0.000813837, 2.52342e-05, 0.00566956, 0.000813837, 2.52342e-05, 0.00566956, -0.000813837, -0.000543823, 0.00379363, 0.000813837, 0.00219296, -0.00522834, -0.000813837, 0.000949333, -0.00371297, 0.000813837, 0.000949333, -0.00371297, -0.000813837, 0.00219296, -0.00522834, 0.000813837, 2.52336e-05, -0.0019841, -0.000813837, -0.00207221, -0.000412188, -0.000813837, -0.00141448, -0.00258045, -0.000813837, -0.00207221, -0.000412188, -0.000813837, 2.52336e-05, -0.0019841, -0.000813837, -0.000543824, -0.000108172, -0.000813837, -0.000735971, 0.00184273, -0.000813837, -0.00207221, 0.00409765, -0.000813837, -0.0022943, 0.00184273, -0.000813837, -0.000543823, 0.00379363, -0.000813837, -0.0022943, 0.00184273, -0.000813837, -0.00207221, -0.000412188, 0.000813837, -0.00207221, -0.000412188, -0.000813837, -0.0022943, 0.00184273, 0.000813837, 0.000949333, 0.00739843, -0.000813837, -0.000346372, 0.00826419, 0.000813837, -0.000346372, 0.00826419, -0.000813837, 0.000949333, 0.00739843, 0.000813837, -0.000543824, -0.000108172, -0.000813837, -0.000735971, 0.00184273, 0.000813837, -0.000735971, 0.00184273, -0.000813837, -0.000543824, -0.000108172, 0.000813837, 2.52342e-05, 0.00566956, -0.000813837, -0.000346372, 0.00826419, -0.000813837, -0.00141448, 0.00626591, -0.000813837, 0.000949333, 0.00739843, -0.000813837, -0.00141448, 0.00626591, -0.000813837, -0.00207221, 0.00409765, 0.000813837, -0.00207221, 0.00409765, -0.000813837, -0.00141448, 0.00626591, 0.000813837, -0.00207221, -0.000412188, -0.000813837, -0.00141448, -0.00258045, 0.000813837, -0.00141448, -0.00258045, -0.000813837, -0.00207221, -0.000412188, 0.000813837, 0.00370833, -0.00647197, -0.000813837, 0.00284257, -0.00776767, -0.000813837, 0.00109106, -0.00633024, -0.000813837, 0.00370833, -0.00647197, -0.000813837, 0.000949333, -0.00371297, -0.000813837, -0.00141448, -0.00258045, -0.000813837, 2.52336e-05, -0.0019841, -0.000813837, -0.000543824, -0.000108172, 0.000813837, -0.000543824, -0.000108172, -0.000813837, 2.52336e-05, -0.0019841, 0.000813837, -0.000735971, 0.00184273, -0.000813837, -0.000543823, 0.00379363, 0.000813837, -0.000543823, 0.00379363, -0.000813837, -0.000735971, 0.00184273, 0.000813837, -0.000346372, -0.00457873, -0.000813837, 0.00109106, -0.00633024, 0.000813837, 0.00109106, -0.00633024, -0.000813837, -0.000346372, -0.00457873, 0.000813837, -0.000543824, -0.000108172, -0.000813837, -0.0022943, 0.00184273, -0.000813837, -0.000735971, 0.00184273, -0.000813837, 0.00370833, -0.00647197, -0.000813837, 0.00219296, -0.00522834, 0.000813837, 0.00219296, -0.00522834, -0.000813837, 0.00370833, -0.00647197, 0.000813837, 0.00109106, -0.00633024, -0.000813837, 0.00284257, -0.00776767, 0.000813837, 0.00284257, -0.00776767, -0.000813837, 0.00109106, -0.00633024, 0.000813837, 0.00284257, -0.00776767, -0.000813837, 0.00370833, -0.00647197, 0.000813837, 0.00370833, -0.00647197, -0.000813837, 0.00284257, -0.00776767, 0.000813837 )
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 3 )
 
-[node name="UI Canvas" type="Control" parent="."]
+[node name="Main Menu" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Game Title" type="Label" parent="UI Canvas"]
+[node name="Game Title" type="Label" parent="Main Menu"]
 anchor_right = 1.0
 anchor_bottom = 0.4
 margin_bottom = 0.199982
@@ -116,7 +81,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play Button" type="Panel" parent="UI Canvas"]
+[node name="Play Button" type="Panel" parent="Main Menu"]
 anchor_left = 0.451
 anchor_top = 0.67
 anchor_right = 0.549
@@ -130,7 +95,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background" type="Panel" parent="UI Canvas/Play Button"]
+[node name="Background" type="Panel" parent="Main Menu/Play Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 input_pass_on_modal_close_click = false
@@ -140,7 +105,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play Symbol" type="Panel" parent="UI Canvas/Play Button"]
+[node name="Play Symbol" type="Panel" parent="Main Menu/Play Button"]
 anchor_left = 0.3
 anchor_top = 0.3
 anchor_right = 0.7
@@ -155,7 +120,106 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Play Button" type="Button" parent="UI Canvas/Play Button"]
+[node name="Play Button" type="Button" parent="Main Menu/Play Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 3.0
+margin_right = -3.00003
+margin_bottom = -3.00003
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/normal = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UI Canvas" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause Button" type="Button" parent="UI Canvas"]
+anchor_left = 0.917
+anchor_top = 0.017
+anchor_right = 0.99
+anchor_bottom = 0.142
+margin_left = -0.00805664
+margin_top = -0.200001
+margin_right = 0.239929
+margin_bottom = -0.200005
+icon = ExtResource( 17 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pause Menu" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game Title" type="Label" parent="Pause Menu"]
+anchor_right = 1.0
+anchor_bottom = 0.4
+margin_bottom = 0.199982
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.921569, 0.921569, 0.921569, 1 )
+text = "Paused"
+align = 1
+valign = 2
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Button" type="Panel" parent="Pause Menu"]
+anchor_left = 0.451
+anchor_top = 0.67
+anchor_right = 0.549
+anchor_bottom = 0.837
+margin_left = 0.175964
+margin_top = -3.05176e-05
+margin_right = -0.176025
+margin_bottom = -0.200012
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="Pause Menu/Play Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+input_pass_on_modal_close_click = false
+size_flags_stretch_ratio = 0.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Symbol" type="Panel" parent="Pause Menu/Play Button"]
+anchor_left = 0.3
+anchor_top = 0.3
+anchor_right = 0.7
+anchor_bottom = 0.7
+margin_left = 5.72205e-06
+margin_top = 1.90735e-06
+margin_right = -7.62939e-06
+margin_bottom = -7.62939e-06
+input_pass_on_modal_close_click = false
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Resume Button" type="Button" parent="Pause Menu/Play Button"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 3.0
@@ -189,105 +253,28 @@ far = 1000.0
 [node name="Planets" type="Spatial" parent="."]
 script = ExtResource( 16 )
 
-[node name="Planet 1" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="Planet" type="MeshInstance" parent="Planets/Planet 1"]
-mesh = SubResource( 8 )
-material/0 = ExtResource( 6 )
-
-[node name="Planet 2" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 2"]
-mesh = SubResource( 9 )
-skeleton = NodePath("")
-material/0 = ExtResource( 5 )
-
-[node name="cloud 1" type="MeshInstance" parent="Planets/Planet 2"]
-transform = Transform( 1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0 )
-mesh = SubResource( 10 )
-skeleton = NodePath("")
-material/0 = ExtResource( 8 )
-
-[node name="cloud 2" type="MeshInstance" parent="Planets/Planet 2"]
-transform = Transform( -1.001, 0, 0, 0, -1.001, 0, 0, 0, -1.001, 0, 0, 0 )
-mesh = SubResource( 11 )
-material/0 = ExtResource( 8 )
-
-[node name="Planet 3" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 3"]
-mesh = SubResource( 12 )
-skeleton = NodePath("")
-material/0 = ExtResource( 7 )
-
-[node name="Planet 4" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 4"]
-mesh = SubResource( 13 )
-skeleton = NodePath("")
-material/0 = ExtResource( 9 )
-
-[node name="cloud" type="MeshInstance" parent="Planets/Planet 4"]
-transform = Transform( 1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0 )
-mesh = SubResource( 14 )
-skeleton = NodePath("")
-material/0 = ExtResource( 10 )
-
-[node name="Planet 5" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 5"]
-mesh = SubResource( 15 )
-skeleton = NodePath("")
-material/0 = ExtResource( 11 )
-
-[node name="cloud" type="MeshInstance" parent="Planets/Planet 5"]
-transform = Transform( 1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0 )
-mesh = SubResource( 16 )
-skeleton = NodePath("")
-material/0 = ExtResource( 12 )
-
-[node name="Planet 6" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 6"]
-mesh = SubResource( 17 )
-skeleton = NodePath("")
-material/0 = ExtResource( 13 )
-
-[node name="cloud" type="MeshInstance" parent="Planets/Planet 6"]
-transform = Transform( 1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0 )
-mesh = SubResource( 18 )
-skeleton = NodePath("")
-material/0 = ExtResource( 14 )
-
-[node name="Planet 7" type="Spatial" parent="Planets"]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
-visible = false
-
-[node name="planet" type="MeshInstance" parent="Planets/Planet 7"]
-mesh = SubResource( 19 )
-material/0 = SubResource( 20 )
-
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767289, 0 )
-mesh = SubResource( 23 )
+mesh = SubResource( 21 )
 
 [node name="Block" type="Spatial" parent="."]
 transform = Transform( 1.91069e-15, -4.37114e-08, 1, -1, -4.37114e-08, 0, 4.37114e-08, -1, -4.37114e-08, 0, 0, 0 )
 script = ExtResource( 21 )
 
-[node name="block" parent="Block" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5, -2.3, 0, 0 )
+[node name="block" type="Spatial" parent="Block"]
+transform = Transform( 1, 0, 2.11758e-22, 0, 1, 0, 0, 0, 1.5, -2.3, 0, 0 )
 
-[connection signal="button_up" from="UI Canvas/Play Button/Play Button" to="." method="_on_Play_Button_up"]
+[node name="Circle" type="MeshInstance" parent="Block/block"]
+transform = Transform( 97.8148, 20.7912, 0, 0, 0, 100, 20.7912, -97.8148, 0, 0, 0, 0 )
+mesh = SubResource( 22 )
+material/0 = null
+
+[node name="Area" type="Area" parent="Block/block"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Block/block/Area"]
+transform = Transform( 97.8148, 20.7912, 0, 0, 9.09495e-13, 100, 20.7912, -97.8148, 0, 0, 0, 0 )
+shape = SubResource( 23 )
+
+[connection signal="button_up" from="Main Menu/Play Button/Play Button" to="." method="_on_Play_Button_up"]
+[connection signal="button_up" from="UI Canvas/Pause Button" to="." method="_on_Pause_Button_up"]
+[connection signal="button_up" from="Pause Menu/Play Button/Resume Button" to="." method="_on_Resume_Button_up"]

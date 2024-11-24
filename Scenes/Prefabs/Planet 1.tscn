@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/textures/Planet 1/Material/BarrenPlanet.material" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+[node name="Planet 1" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="Planet" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = ExtResource( 1 )

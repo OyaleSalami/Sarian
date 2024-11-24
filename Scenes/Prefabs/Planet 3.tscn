@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/textures/Planet 3/Material/FrozenPlanet.material" type="Material" id=1]
+
+[sub_resource type="SphereMesh" id=1]
+
+[node name="Planet 3" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="planet" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )

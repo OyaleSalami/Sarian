@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Models/textures/Planet 5/Material/GasPlanet2Cloud.material" type="Material" id=1]
+[ext_resource path="res://Models/textures/Planet 5/Material/GasPlanet2.material" type="Material" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="SphereMesh" id=2]
+
+[node name="Planet 5" type="Spatial"]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+
+[node name="planet" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+skeleton = NodePath("")
+material/0 = ExtResource( 2 )
+
+[node name="cloud" type="MeshInstance" parent="."]
+transform = Transform( 1.001, 0, 0, 0, 1.001, 0, 0, 0, 1.001, 0, 0, 0 )
+mesh = SubResource( 2 )
+skeleton = NodePath("")
+material/0 = ExtResource( 1 )
